@@ -4,8 +4,8 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
-import 'package:reptel_demo/UI/mission_detail_screen/mission_details_screen.dart';
-import 'package:reptel_demo/UI/profile_screen/profile_screen.dart';
+import 'package:reptel_demo/presentation/screens/mission_detail_screen/mission_details_screen.dart';
+import 'package:reptel_demo/presentation/screens/profile_screen/profile_screen.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -87,6 +87,30 @@ class _HomePageState extends State<HomePage> {
                       isProfile = false;
                       isUpdates = false;
                       isHistory = true;
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            child: const Center(
+                              child: Text(
+                                'Feature unavailable in demo',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    decoration: TextDecoration.none),
+                              ),
+                            ),
+                          );
+                        },
+                      ).then((onValue) {
+                        setState(() {
+                          isHome = true;
+                          isProfile = false;
+                          isUpdates = false;
+                          isHistory = false;
+                        });
+                      });
                     });
                   }
                 },
@@ -118,6 +142,30 @@ class _HomePageState extends State<HomePage> {
                       isProfile = false;
                       isHistory = false;
                       isUpdates = true;
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 15),
+                            child: const Center(
+                              child: Text(
+                                'Feature unavailable in demo',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    decoration: TextDecoration.none),
+                              ),
+                            ),
+                          );
+                        },
+                      ).then((onValue) {
+                        setState(() {
+                          isHome = true;
+                          isProfile = false;
+                          isUpdates = false;
+                          isHistory = false;
+                        });
+                      });
                     });
                   }
                 },

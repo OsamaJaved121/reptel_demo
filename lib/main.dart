@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:reptel_demo/UI/login_screen/login_screen.dart';
+import 'package:reptel_demo/presentation/screens/login_screen/login_screen.dart';
+// import 'package:reptel_demo/presentation/screens/login_screen/login_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:reptel_demo/UI/home_screen/home_page.dart';
+import 'package:reptel_demo/presentation/screens/home_screen/home_page.dart';
 
 final _formKey = GlobalKey<FormState>();
 
